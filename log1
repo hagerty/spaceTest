@@ -1,0 +1,10 @@
+libdc1394 error: Failed to initialize libdc1394
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcurand.so locally
+Namespace(arch=0, arch_multiplier=1.0, augment=0, band8=0, batch_norm=1, batch_size=8, conv_bias=0.01, conv_stddev=None, dilarch=2, dropout=0.0, dump_threshold=-1.4, epoch_decay=1.0, fc_bias=0.01, fc_stddev=0.01, ff=1, final_bn=1, gpu=0, l2_reg_fc=0.0001, lr=0.0001, mode='heatmap', mse_mult=0.1, nonzeros_mult=4, num_epochs=80, optimizer='adam', pieces=50, pred_per_image=1000, predict=1, rectangles=144, restore_path='stored_models_heat/models_heat/epoch_13_continue.ckpt', size=400, smallval=0, train=1)
+Automatic gpu selection.
+Failed to initialize NVML:  Driver Not Loaded
+Exiting...

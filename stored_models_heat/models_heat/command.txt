@@ -1,0 +1,14 @@
+python -u main.py --rectangles 144 --pieces 50 --batch_size 8 --lr 0.001 --dilarch 2 --num_epochs 80 --mode heatmap --final_bn 1 |& tee loghean_final_bl
+python -u main.py --rectangles 144 --pieces 50 --batch_size 8 --lr 0.0001 --epoch_decay 1.0 --dilarch 2 --num_epochs 80 --mode heatmap --final_bn 1 --restore_path models_heat/epoch80.ckpt
+time python -u main.py --rectangles 144 --pieces 50 --batch_size 8 --lr 0.0001 --epoch_decay 1.0 --dilarch 2 --num_epochs 80 --mode heatmap --final_bn 1 --restore_path models_heat/epoch_13_continue.ckpt --predict 1 |& tee o5
+
+--train 0:
+Namespace(arch=0, arch_multiplier=1.0, augment=0, batch_norm=1, batch_size=8, conv_bias=0.01, conv_stddev=None, dilarch=2, dropout=0.0, epoch_decay=1.0, fc_bias=0.01, fc_stddev=0.01, ff=1, final_bn=1, gpu=0, l2_reg_fc=0.0001, lr=0.0001, mode='heatmap', mse_mult=0.1, num_epochs=80, optimizer='adam', pieces=50, pred_per_image=1000, predict=0, rectangles=144, restore_path='models_heat/epoch_13_continue.ckpt', size=400, train=0)
+Pass res [ 0.15177851] time: 375.12056613 main_time: 307.071425676 load_time: 67.5057303905 rest: 0.54341006279
+Pass res [ 0.1482304] time: 378.940814018 main_time: 308.005946636 load_time: 70.3730773926 rest: 0.561789989471
+Pass res [ 0.13955318] time: 92.8624148369 main_time: 76.2653057575 load_time: 16.4790818691 rest: 0.118027210236
+Pass res [ 0.15126078] time: 361.254528999 main_time: 298.57261467 load_time: 62.1424040794 rest: 0.539510250092
+Pass res [ 0.14756605] time: 366.004492998 main_time: 301.869068384 load_time: 63.5795404911 rest: 0.555884122849
+Pass res [ 0.14038718] time: 93.0005619526 main_time: 75.2849538326 load_time: 17.5982484818 rest: 0.117359638214
+Pass res [ 0.15193729] time: 367.468340158 main_time: 298.483606339 load_time: 68.4436061382 rest: 0.541127681732
+

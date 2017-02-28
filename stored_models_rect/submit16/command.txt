@@ -1,0 +1,10 @@
+ongoing on ec3 (as of 6.12 10:20)
+
+python -u main.py --rectangles 16 --pieces 50 --batch_size 16 --lr 0.0002 --epoch_decay 1.0 --mode rectangles --num_epochs 100 --arch_multiplier 5 --mse_mult 10 --restore_path epoch32.ckpt --train 0 |& tee log
+
+Pass res [ 358.75132882   15.26681054    0.61574942] time: 472.701549053 main_time: 381.214490414 load_time: 90.7870182991 rest: 0.700040340424
+Pass res [ 357.48266313   15.10371135    0.62150417] time: 403.036824942 main_time: 361.749004126 load_time: 41.0242152214 rest: 0.263605594635
+Pass res [ 330.02345906   14.98690222    0.61270064] time: 99.3135938644 main_time: 89.4118149281 load_time: 9.77517771721 rest: 0.126601219177
+
+python -u main.py --rectangles 16 --pieces 50 --batch_size 16 --lr 0.0002 --epoch_decay 1.0 --mode rectangles --num_epochs 100 --arch_multiplier 5 --mse_mult 10 --restore_path epoch32.ckpt --predict 1 |& tee log2
+
