@@ -43,7 +43,7 @@ RUN sudo apt-get update
 #RUN sudo dpkg --set-selections < Package.list
 #RUN sudo apt-get dselect-upgrade -y
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 RUN apt-get -y install clang
 
 
