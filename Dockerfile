@@ -1,5 +1,29 @@
 FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu14.04
 
+LABEL maintainer david.lindenbaum@gmail.com
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        cmake \
+        git \
+        wget \
+        libatlas-base-dev \
+        libboost-all-dev \
+        libgflags-dev \
+        libgoogle-glog-dev \
+        libhdf5-serial-dev \
+        libleveldb-dev \
+        liblmdb-dev \
+        libopencv-dev \
+        libprotobuf-dev \
+        libsnappy-dev \
+        protobuf-compiler \
+        python-dev \
+        python-numpy \
+        python-pip \
+        python-setuptools \
+        python-scipy && \
+
 ENV SPACENET_ROOT=/home/spacenet
 WORKDIR $SPACENET_ROOT
 
