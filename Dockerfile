@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN mkdirs /home/spacenet
 ENV SPACENET_ROOT=/home/spacenet
-RUN mkdirs $SPACENET_ROOT
+RUN mkdir -p $SPACENET_ROOT
 WORKDIR $SPACENET_ROOT
 
 #RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py
