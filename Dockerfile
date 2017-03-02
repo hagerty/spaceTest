@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-setuptools \
         python-scipy
 
-RUN mkdir -p $SPACENET_ROOT
+RUN mkdir -p /home/spacenet
 ENV SPACENET_ROOT=/home/spacenet
 WORKDIR $SPACENET_ROOT
 
