@@ -29,7 +29,7 @@ ENV SPACENET_ROOT=/home/spacenet
 WORKDIR $SPACENET_ROOT
 
 #RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py
-RUN git clone -b ${CLONE_TAG} --depth 1 https://github.com/dlindenbaum/spaceTest.git . && \
+RUN git clone --depth 1 https://github.com/dlindenbaum/spaceTest.git . && \
     sudo cp -R sources.list* /etc/apt/
     sudo apt-get update
     sudo apt-get install dselect
