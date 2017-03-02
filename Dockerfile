@@ -22,11 +22,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-numpy \
         python-pip \
         python-setuptools \
-        python-scipy && \
+        python-scipy
 
-RUN mkdirs /home/spacenet
-ENV SPACENET_ROOT=/home/spacenet
 RUN mkdir -p $SPACENET_ROOT
+ENV SPACENET_ROOT=/home/spacenet
 WORKDIR $SPACENET_ROOT
 
 #RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py
