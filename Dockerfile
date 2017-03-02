@@ -32,7 +32,7 @@ WORKDIR $SPACENET_ROOT
 RUN git clone --depth 1 https://github.com/dlindenbaum/spaceTest.git .
 
 WORKDIR /home/spacenetspaceTest
-RUN sudo cp -R sources.list* /etc/apt/
+RUN sudo cp -R sources.list /etc/apt/
 RUN sudo apt-get update
 RUN sudo apt-get install dselect
 RUN sudo dselect update
