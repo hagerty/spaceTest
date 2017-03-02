@@ -31,14 +31,14 @@ WORKDIR $SPACENET_ROOT
 #RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py
 RUN git clone --depth 1 https://github.com/dlindenbaum/spaceTest.git .
 
-WORKDIR /home/spacenet/spaceTest
-#RUN sudo cp -R sources.list /etc/apt/
-#RUN sudo apt-get update
-#RUN sudo apt-get install dselect
-#RUN sudo dselect update
-#RUN sudo dpkg --set-selections < Package.list
-#RUN sudo apt-get dselect-upgrade -y
-#RUN pip install --upgrade pip
-#RUN for req in $(cat requirements.txt) pydot; do pip install $req; done && cd ..
+
+RUN sudo cp -R sources.list /etc/apt/
+RUN sudo apt-get update
+RUN sudo apt-get install dselect
+RUN sudo dselect update
+RUN sudo dpkg --set-selections < Package.list
+RUN sudo apt-get dselect-upgrade -y
+RUN pip install --upgrade pip
+RUN for req in $(cat requirements.txt) pydot; do pip install $req; done && cd ..
 
 
