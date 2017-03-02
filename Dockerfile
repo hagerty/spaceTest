@@ -42,9 +42,9 @@ RUN sudo apt-get update
 #RUN sudo dselect update
 #RUN sudo dpkg --set-selections < Package.list
 #RUN sudo apt-get dselect-upgrade -y
-RUN pip install --upgrade pip0
-RUN for req in $(cat requirements.txt) pydot; do pip install $req; done && cd ..
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 RUN sudo apt-get install clang
-RUN sudo pip install tensorflow
+
 
 
