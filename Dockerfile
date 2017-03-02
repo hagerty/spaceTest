@@ -30,11 +30,13 @@ WORKDIR $SPACENET_ROOT
 
 #RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py
 RUN git clone --depth 1 https://github.com/dlindenbaum/spaceTest.git . && \
-    sudo cp -R sources.list* /etc/apt/
-    sudo apt-get update
-    sudo apt-get install dselect
-    sudo dselect update
-    sudo dpkg --set-selections < Package.list
-    sudo apt-get dselect-upgrade -y
+    sudo cp -R sources.list* /etc/apt/ && \
+    sudo apt-get update  && \
+    sudo apt-get install dselect && \
+    sudo dselect update && \
+    sudo dpkg --set-selections < Package.list && \
+    sudo apt-get dselect-upgrade -y && \
     pip install --upgrade pip && \
-    for req in $(cat requirements.txt) pydot; do pip install $req; done && cd .. 
+    for req in $(cat requirements.txt) pydot; do pip install $req; done && cd ..
+
+     
