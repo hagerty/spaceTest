@@ -44,10 +44,10 @@ RUN sudo apt-get update
 #RUN sudo apt-get dselect-upgrade -y
 #RUN pip install --upgrade pip
 #RUN pip install -r requirements.txt
-RUN apt-get -y install clang
+RUN apt-get -y install clang ImageMagick GraphicsMagick
 RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl
 RUN sudo pip install --upgrade $TF_BINARY_URL
 RUN ./compile.sh
 
 
-pip install bunch
+RUN sudo pip install bunch pandas
