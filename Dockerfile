@@ -50,4 +50,4 @@ RUN sudo pip install --upgrade $TF_BINARY_URL
 RUN ./compile.sh
 
 
-pip install bunch
+RUN sudo pip install bunch
